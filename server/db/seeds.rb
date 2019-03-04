@@ -1,3 +1,6 @@
+Item.destroy_all
+Product.destroy_all
+OperatorsPoste.destroy_all
 Operator.destroy_all
 Poste.destroy_all
 
@@ -11,8 +14,9 @@ Operator.create!([
   { first_name: "Larmina", last_name: "Betouche" }
 ])
 
-Poste.all.each do |poste|
-  Operator.all.each do |op|
-    OperatorsPoste.create!(poste: poste, operator: op)
-  end
-end
+Product.create!([
+  { name: "Robe rouge" },
+  { name: "Robe jaune" },
+  { name: "Robe bleue" },
+  { name: "Robe verte" }
+])

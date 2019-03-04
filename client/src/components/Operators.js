@@ -9,7 +9,8 @@ import {
   ListItem,
   ListItemText,
   ListItemAvatar,
-  Avatar
+  Avatar,
+  Typography
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import _ from "lodash";
@@ -22,6 +23,9 @@ const styles = theme => ({
   },
   root: {
     margin: theme.spacing.unit * 3
+  },
+  todo: {
+    marginTop: theme.spacing.unit * 4
   }
 });
 
@@ -48,16 +52,24 @@ class Operators extends Component {
     }
 
     return (
-      <List className={classes.root}>
-        {_.map(operators, operator => (
-          <ListItem key={operator.id}>
-            <ListItemAvatar>
-              <Avatar alt={`Avatar ID ${operator.id}`} />
-            </ListItemAvatar>
-            <ListItemText inset primary={operator.attributes.name} />
-          </ListItem>
-        ))}
-      </List>
+      <div className={classes.root}>
+        <List>
+          {_.map(operators, operator => (
+            <ListItem key={operator.id}>
+              <ListItemAvatar>
+                <Avatar alt={`Avatar ID ${operator.id}`} />
+              </ListItemAvatar>
+              <ListItemText inset primary={operator.attributes.name} />
+            </ListItem>
+          ))}
+        </List>
+        <Typography className={classes.todo}>
+          <em>
+            TODO :<br />
+            Lien vers dashboard personnel avec suivi des points
+          </em>
+        </Typography>
+      </div>
     );
   }
 }

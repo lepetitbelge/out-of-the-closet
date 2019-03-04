@@ -7,7 +7,8 @@ import {
   CircularProgress,
   List,
   ListItem,
-  ListItemText
+  ListItemText,
+  Typography
 } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import _ from "lodash";
@@ -20,6 +21,12 @@ const styles = theme => ({
   },
   root: {
     margin: theme.spacing.unit * 3
+  },
+  text: {
+    textTransform: "capitalize"
+  },
+  todo: {
+    marginTop: theme.spacing.unit * 4
   }
 });
 
@@ -50,10 +57,21 @@ class Postes extends Component {
         <List>
           {_.map(postes, poste => (
             <ListItem key={poste.id}>
-              <ListItemText inset primary={poste.attributes.category} />
+              <ListItemText
+                className={classes.text}
+                inset
+                primary={poste.attributes.category}
+              />
             </ListItem>
           ))}
         </List>
+        <Typography className={classes.todo}>
+          <em>
+            TODO pour aller plus loin :<br />
+            Suivi du nombre de pièces traitées pour chaque poste (tout opérateur
+            confondu)
+          </em>
+        </Typography>
       </div>
     );
   }

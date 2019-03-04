@@ -34,7 +34,7 @@ Nous sommes une entreprise d'envoi de vêtements. Notre catalogue se compose de 
 Il y a trois étapes avant l'envoi d'une pièce qui correspondent aux trois *Poste*s logistiques :
 
 - le _picking_ où un opérateur sort les pièces nécessaires des stocks
-- le _checking_ où un opérateur contrôle la qualité du vêtement
+- le _checking_ où un opérateur contrôle la qualité des pièces
 - le _packing_ où un opérateur empacte la pièce et imprime le bordereau pour l'envoi
 
 Un opérateur (_Operator_) peut changer de poste pendant la journée suivant les besoins.
