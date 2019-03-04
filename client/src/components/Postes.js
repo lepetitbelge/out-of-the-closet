@@ -68,8 +68,8 @@ class Postes extends Component {
         <Typography className={classes.todo}>
           <em>
             TODO pour aller plus loin :<br />
-            Suivi du nombre de pièces traitées pour chaque poste (tout opérateur
-            confondu)
+            Suivi journalier du nombre de pièces traitées pour chaque poste
+            (tout opérateur confondu)
           </em>
         </Typography>
       </div>
