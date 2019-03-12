@@ -43,7 +43,7 @@ Un opérateur (_Operator_) peut changer de poste pendant la journée suivant les
 
 _L'énoncé est volontairement très succinct. Nous souhaitons vous laisser le maximum de liberté sur les choix techniques._
 
-Nous aimerions pouvoir tracker quel opérateur a réalisé telle action sur une pièce avant son envoi. A la fin de la journée, chaque opérateur se verra attribué automatiquement un certain nombre de points suivant le nombre de pièces qu'il a traité. Un opérateur peut suivre l'évolution de ses points dans un dashboard personnel.
+Nous aimerions pouvoir tracker quel opérateur a réalisé telle action sur une pièce avant son envoi. A la fin de la journée, chaque opérateur se verra attribuer automatiquement un certain nombre de points suivant le nombre de pièces qu'il a traité. Un opérateur peut suivre l'évolution de ses points dans un dashboard personnel.
 
 Ce qu'il n'est pas nécessaire de faire :
 
