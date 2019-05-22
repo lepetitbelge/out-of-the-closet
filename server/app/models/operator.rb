@@ -2,7 +2,7 @@ class Operator < ApplicationRecord
   has_many :activities
   has_many :postes, through: :activities
   has_many :products, through: :activities
-  has_many :items, through: :products
+  has_many :items, through: :activities
 
   validates :first_name, :last_name, presence: true
 

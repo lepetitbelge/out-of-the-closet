@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :product
-  has_many :activities, through: :product
-  has_many :operators, through: :product
+  belongs_to :activity
+  has_many :operators, through: :activities
 
   validates :product, presence: true
 end
