@@ -1,6 +1,5 @@
 class Poste < ApplicationRecord
-  has_many :operators_postes, dependent: :destroy
-  has_many :operators, through: :operators_postes
+  has_many :operators, through: :activities
   has_many :activities
 
   enum category: %i(pickup checkup packup)
