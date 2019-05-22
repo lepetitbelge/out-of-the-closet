@@ -3,7 +3,8 @@ class Poste < ApplicationRecord
   has_many :operators, through: :operators_postes
   has_many :activities
 
-  enum category: { pickup: 0, checkup: 1, packup: 2 }
+  enum category: %i(pickup checkup packup)
+
   def to_builder
     Jbuilder.new do |poste|
       poste.(self, :id, :category)
