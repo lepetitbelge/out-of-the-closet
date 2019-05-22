@@ -1,3 +1,3 @@
 class Activity < ApplicationRecord
-  belongs_to :product, :operator, :postes
+  belongs_to :product, :operator, :poste
 end

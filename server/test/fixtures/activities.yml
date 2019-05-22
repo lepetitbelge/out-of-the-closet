@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  products: 
-  operators: 
-  postes: 
+  product: 
+  operator: 
+  poste: 
 
 two:
-  products: 
-  operators: 
-  postes: 
+  product: 
+  operator: 
+  poste: 
