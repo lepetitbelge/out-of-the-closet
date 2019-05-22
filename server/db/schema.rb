@@ -10,12 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_084602) do
+ActiveRecord::Schema.define(version: 2019_05_22_100605) do
+
+  create_table "activities", force: :cascade do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer "products_id"
+    t.integer "operators_id"
+    t.integer "postes_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["operators_id"], name: "index_activities_on_operators_id"
+    t.index ["postes_id"], name: "index_activities_on_postes_id"
+    t.index ["products_id"], name: "index_activities_on_products_id"
+  end
 
   create_table "items", force: :cascade do |t|
     t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["product_id"], name: "index_items_on_product_id"
   end
 
@@ -45,6 +59,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_084602) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "operator_id"
+    t.index ["operator_id"], name: "index_products_on_operator_id"
   end
 
 end
