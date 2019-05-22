@@ -1,8 +1,8 @@
 Item.destroy_all
 Product.destroy_all
-# OperatorsPoste.destroy_all
 Operator.destroy_all
 Poste.destroy_all
+Activity.destroy_all
 
 # Poste.categories.keys.each { |cat| Poste.create!(category: cat) }
 
