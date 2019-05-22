@@ -1,2 +1,0 @@
-class OperatorsPoste < ApplicationRecord
-end
