@@ -3,5 +3,6 @@ class Item < ApplicationRecord
   has_many :activities
   has_many :operators, through: :activities
 
+  validates :name, presence: true
   validates :product, presence: true
 end
