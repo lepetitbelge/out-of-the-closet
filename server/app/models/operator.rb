@@ -1,7 +1,8 @@
 class Operator < ApplicationRecord
-  has_many :operators_postes, dependent: :destroy
-  has_many :postes, through: :operators_postes
   has_many :activities
+  has_many :postes, through: :activities
+  has_many :products, through: :activities
+  has_many :items, through: :activities
 
   validates :first_name, :last_name, presence: true
 
